@@ -1,0 +1,163 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(60, 4.8%, 95.9%);
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(60, 4.8%, 95.9%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.5rem;
+  
+  /* Security Dashboard Custom Colors */
+  --dashboard-bg: hsl(222, 47%, 11%);
+  --dashboard-sidebar: hsl(215, 25%, 16%);
+  --dashboard-card: hsl(215, 25%, 16%);
+  --dashboard-border: hsl(215, 20%, 26%);
+  --dashboard-text: hsl(210, 40%, 98%);
+  --dashboard-text-muted: hsl(215, 20%, 65%);
+  
+  /* Severity Colors */
+  --severity-critical: hsl(0, 73%, 50%);
+  --severity-high: hsl(38, 92%, 50%);
+  --severity-medium: hsl(217, 91%, 60%);
+  --severity-low: hsl(142, 76%, 36%);
+  
+  /* Primary Colors */
+  --primary-500: hsl(258, 90%, 66%);
+  --primary-600: hsl(258, 90%, 58%);
+  --primary-700: hsl(258, 90%, 50%);
+  
+  /* Teal Colors */
+  --teal-500: hsl(188, 94%, 43%);
+  --teal-600: hsl(191, 91%, 36%);
+  --teal-700: hsl(193, 82%, 31%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+/* Security Dashboard Styles */
+.dashboard-bg {
+  background-color: var(--dashboard-bg);
+}
+
+.dashboard-sidebar {
+  background-color: var(--dashboard-sidebar);
+  border-color: var(--dashboard-border);
+}
+
+.dashboard-card {
+  background-color: var(--dashboard-card);
+  border-color: var(--dashboard-border);
+}
+
+.glassmorphism {
+  background: rgba(30, 41, 59, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.gradient-border {
+  background: linear-gradient(45deg, var(--primary-500), var(--teal-500));
+  padding: 1px;
+  border-radius: 12px;
+}
+
+.gradient-border > div {
+  background: var(--dashboard-card);
+  border-radius: 11px;
+}
+
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+}
+
+.severity-critical {
+  color: var(--severity-critical);
+}
+
+.severity-high {
+  color: var(--severity-high);
+}
+
+.severity-medium {
+  color: var(--severity-medium);
+}
+
+.severity-low {
+  color: var(--severity-low);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+.animate-pulse-slow {
+  animation: pulse 3s ease-in-out infinite;
+}

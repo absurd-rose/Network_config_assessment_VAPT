@@ -1,0 +1,141 @@
+{
+  "device_info": {
+    "agent_id": "001",
+    "device_name": "tinyos11",
+    "ip": "172.16.151.128",
+    "os": "Microsoft Windows 11 Pro",
+    "last_seen": "2025-06-24T08:17:26+00:00"
+  },
+  "os_details": {
+    "build": "22631.2715",
+    "display_version": "23H2",
+    "major": "10",
+    "minor": "0",
+    "name": "Microsoft Windows 11 Pro",
+    "version": "10.0.22631.2715"
+  },
+  "summary": {
+    "software_analyzed": 16,
+    "alerts_found": 2018,
+    "syscheck_entries": 26403,
+    "total_cves": 7,
+    "severity_breakdown": {
+      "Critical": 1,
+      "High": 4,
+      "Medium": 2,
+      "Low": 0
+    }
+  },
+  "findings": [
+    {
+      "timestamp": "2025-06-17T06:52:09+00:00",
+      "software": "Microsoft Visual C++ 2015-2022 Redistributable (x64) - 14.40.33810",
+      "cve_id": "CVE-1999-0012",
+      "cvss_score": 7.0,
+      "description": "Some web servers under Microsoft Windows allow remote attackers to bypass access restrictions for files with long file names.",
+      "risk_level": "High",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-1999-0012",
+      "remediation": {
+        "summary": "No explicit remediation found. Check CVE description and vendor documentation.",
+        "references": []
+      }
+    },
+    {
+      "timestamp": "2025-06-17T06:52:09+00:00",
+      "software": "Microsoft Visual C++ 2015-2022 Redistributable (x64) - 14.40.33810",
+      "cve_id": "CVE-2024-43590",
+      "cvss_score": 7.8,
+      "description": "Visual C++ Redistributable Installer Elevation of Privilege Vulnerability",
+      "risk_level": "High",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-43590",
+      "remediation": {
+        "summary": "Refer to vendor advisory or patch links provided.",
+        "references": [
+          "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-43590"
+        ]
+      }
+    },
+    {
+      "timestamp": "2025-06-20T05:23:07+00:00",
+      "software": "Wazuh Agent",
+      "cve_id": "CVE-2021-26814",
+      "cvss_score": 8.8,
+      "description": "Wazuh API in Wazuh from 4.0.0 to 4.0.3 allows authenticated users to execute arbitrary code with administrative privileges via /manager/files URI. An authenticated user to the service may exploit incomplete input validation on the /manager/files API to inject arbitrary code within the API service script.",
+      "risk_level": "High",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-26814",
+      "remediation": {
+        "summary": "Refer to vendor advisory or patch links provided.",
+        "references": [
+          "https://documentation.wazuh.com/4.0/release-notes/release_4_0_4.html",
+          "https://github.com/wazuh/wazuh/releases/tag/v4.0.4",
+          "https://documentation.wazuh.com/4.0/release-notes/release_4_0_4.html",
+          "https://github.com/wazuh/wazuh/releases/tag/v4.0.4"
+        ]
+      }
+    },
+    {
+      "timestamp": "2025-06-20T05:23:07+00:00",
+      "software": "Wazuh Agent",
+      "cve_id": "CVE-2021-41821",
+      "cvss_score": 6.5,
+      "description": "Wazuh Manager in Wazuh through 4.1.5 is affected by a remote Integer Underflow vulnerability that might lead to denial of service. A crafted message must be sent from an authenticated agent to the manager.",
+      "risk_level": "Medium",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-41821",
+      "remediation": {
+        "summary": "Refer to vendor advisory or patch links provided.",
+        "references": [
+          "https://documentation.wazuh.com/current/release-notes/release_4_2_0.html",
+          "https://github.com/wazuh/wazuh/issues/9201",
+          "https://documentation.wazuh.com/current/release-notes/release_4_2_0.html",
+          "https://github.com/wazuh/wazuh/issues/9201"
+        ]
+      }
+    },
+    {
+      "timestamp": "2025-06-20T05:23:07+00:00",
+      "software": "Wazuh Agent",
+      "cve_id": "CVE-2021-44079",
+      "cvss_score": 9.8,
+      "description": "In the wazuh-slack active response script in Wazuh 4.2.x before 4.2.5, untrusted user agents are passed to a curl command line, potentially resulting in remote code execution.",
+      "risk_level": "Critical",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2021-44079",
+      "remediation": {
+        "summary": "Refer to vendor advisory or patch links provided.",
+        "references": [
+          "https://github.com/wazuh/wazuh/issues/10858",
+          "https://github.com/wazuh/wazuh/issues/10858#issuecomment-991118254",
+          "https://github.com/wazuh/wazuh/pull/10809",
+          "https://github.com/wazuh/wazuh/issues/10858",
+          "https://github.com/wazuh/wazuh/issues/10858#issuecomment-991118254",
+          "https://github.com/wazuh/wazuh/pull/10809"
+        ]
+      }
+    },
+    {
+      "timestamp": "2025-06-24T05:33:08+00:00",
+      "software": "Store Experience Host",
+      "cve_id": "CVE-2001-1533",
+      "cvss_score": 5.3,
+      "description": "Microsoft Internet Security and Acceleration (ISA) Server 2000 allows remote attackers to cause a denial of service via a flood of fragmented UDP packets.  NOTE: the vendor disputes this issue, saying that it requires high bandwidth to exploit, and the server does not experience any instability.  Therefore this \"laws of physics\" issue might not be included in CVE",
+      "risk_level": "Medium",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2001-1533",
+      "remediation": {
+        "summary": "No explicit remediation found. Check CVE description and vendor documentation.",
+        "references": []
+      }
+    },
+    {
+      "timestamp": "2025-06-24T05:33:08+00:00",
+      "software": "Xbox Identity Provider",
+      "cve_id": "CVE-2022-21967",
+      "cvss_score": 7.0,
+      "description": "Xbox Live Auth Manager for Windows Elevation of Privilege Vulnerability",
+      "risk_level": "High",
+      "url": "https://nvd.nist.gov/vuln/detail/CVE-2022-21967",
+      "remediation": {
+        "summary": "No explicit remediation found. Check CVE description and vendor documentation.",
+        "references": []
+      }
+    }
+  ]
+}
